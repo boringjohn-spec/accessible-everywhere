@@ -1,0 +1,59 @@
+{
+  "name": "accessible-everywhere",
+  "version": "1.0.0",
+  "description": "An accessibility skill for people designing and building with AI: WCAG 2.2 AA design tokens, 14 cross-platform component contracts, a static audit and a contrast checker for web, iOS, Android, React Native and Flutter.",
+  "type": "module",
+  "license": "MIT",
+  "author": "Gaga John",
+  "keywords": [
+    "accessibility",
+    "a11y",
+    "wcag",
+    "wcag22",
+    "agent-skill",
+    "claude-code",
+    "skill",
+    "ios",
+    "android",
+    "react-native",
+    "flutter",
+    "voiceover",
+    "talkback",
+    "contrast",
+    "inclusive-design",
+    "design-system"
+  ],
+  "files": [
+    "SKILL.md",
+    "references",
+    "scripts",
+    "templates",
+    "rules",
+    "examples",
+    "README.md",
+    "LICENSE"
+  ],
+  "bin": {
+    "a11y-audit": "scripts/audit.mjs",
+    "a11y-contrast": "scripts/contrast.mjs"
+  },
+  "scripts": {
+    "test": "node --test tests/*.test.mjs",
+    "build": "node scripts/build.mjs",
+    "validate": "node scripts/build.mjs --check && node scripts/validate.mjs",
+    "audit": "node scripts/audit.mjs",
+    "contrast": "node scripts/contrast.mjs",
+    "check": "npm run validate && npm test && node scripts/audit.mjs tests/fixtures/good --fail-on info"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/boringjohn-spec/accessible-everywhere.git"
+  },
+  "homepage": "https://github.com/boringjohn-spec/accessible-everywhere#readme",
+  "bugs": {
+    "url": "https://github.com/boringjohn-spec/accessible-everywhere/issues"
+  }
+}

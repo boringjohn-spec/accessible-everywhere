@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Deals – Shopname</title>
+<style>
+  :root { --focus: #0b57d0; }
+  body { font-size: 1rem; line-height: 1.5; }
+  :focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
+  @media (prefers-reduced-motion: no-preference) { .slide { transition: transform 300ms; } }
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+<main id="main">
+<h1>Shop</h1>
+<h2>Deals</h2>
+<img src="hero.png" alt="Summer sale: 30% off all tents">
+<img src="divider.png" alt="">
+<button type="button" onclick="buy()">Buy now</button>
+<a href="/menu">Menu</a>
+<button type="button" aria-label="Search"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M1 1"/></svg></button>
+<label for="email">Email address</label>
+<input id="email" name="email" type="email" autocomplete="email">
+<iframe src="https://example.com/map" title="Map of our store location"></iframe>
+<video controls src="promo.mp4"><track kind="captions" srclang="en" label="English" src="promo.vtt"></video>
+<a href="/pricing">Read the pricing guide</a>
+<dialog aria-labelledby="d-title"><h2 id="d-title">Saved</h2></dialog>
+</main>
+</body>
+</html>

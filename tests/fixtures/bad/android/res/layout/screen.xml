@@ -1,0 +1,7 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android">
+  <ImageView android:src="@drawable/hero" />
+  <ImageButton android:src="@drawable/ic_share" />
+  <TextView android:text="Total" android:textSize="14dp" />
+  <Button android:text="Click me" android:contentDescription="A button that performs a specific action" />
+  <EditText android:hint="Username" />
+</LinearLayout>

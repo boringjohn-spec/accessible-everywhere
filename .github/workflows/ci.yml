@@ -1,0 +1,34 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node: [20, 22, 24]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node }}
+      - name: Generated rule files are in sync
+        run: node scripts/build.mjs --check
+      - name: Skill package is valid
+        run: node scripts/validate.mjs
+      - name: Unit tests and fixtures
+        run: node --test tests/*.test.mjs
+      - name: Good fixtures pass the audit
+        run: node scripts/audit.mjs tests/fixtures/good --fail-on info
+      - name: Example tokens report the deliberate failure
+        run: |
+          set +e
+          node scripts/contrast.mjs --tokens examples/tokens.example.json
+          test $? -eq 1

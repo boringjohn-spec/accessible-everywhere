@@ -1,0 +1,54 @@
+{
+  "$comment": "Example colour tokens for scripts/contrast.mjs. Colours live in 'colors'; 'pairs' say which foreground sits on which background and how it's used (text, large-text or ui). One pair fails on purpose (text-placeholder) so you can see a suggestion.",
+  "colors": {
+    "white": "#ffffff",
+    "black": "#000000"
+  },
+  "themes": {
+    "light": {
+      "colors": {
+        "surface": "#ffffff",
+        "surface-raised": "#f4f4f6",
+        "text": "#1b1b1f",
+        "text-muted": "#5e5e66",
+        "text-placeholder": "#9a9aa3",
+        "accent": "#0b57d0",
+        "danger": "#b3261e",
+        "border-input": "#7a7a84",
+        "focus-ring": "#0b57d0"
+      },
+      "pairs": [
+        { "fg": "text", "bg": "surface", "use": "text" },
+        { "fg": "text-muted", "bg": "surface", "use": "text" },
+        { "fg": "text-muted", "bg": "surface-raised", "use": "text" },
+        { "fg": "text-placeholder", "bg": "surface", "use": "text" },
+        { "fg": "accent", "bg": "surface", "use": "text" },
+        { "fg": "white", "bg": "accent", "use": "text" },
+        { "fg": "danger", "bg": "surface", "use": "text" },
+        { "fg": "border-input", "bg": "surface", "use": "ui" },
+        { "fg": "focus-ring", "bg": "surface-raised", "use": "ui" }
+      ]
+    },
+    "dark": {
+      "colors": {
+        "surface": "#131316",
+        "surface-raised": "#1f1f24",
+        "text": "#e6e6eb",
+        "text-muted": "#a9a9b3",
+        "accent": "#a8c7fa",
+        "danger": "#f2b8b5",
+        "border-input": "#8e8e98",
+        "focus-ring": "#a8c7fa"
+      },
+      "pairs": [
+        { "fg": "text", "bg": "surface", "use": "text" },
+        { "fg": "text-muted", "bg": "surface-raised", "use": "text" },
+        { "fg": "accent", "bg": "surface", "use": "text" },
+        { "fg": "black", "bg": "accent", "use": "text" },
+        { "fg": "danger", "bg": "surface", "use": "text" },
+        { "fg": "border-input", "bg": "surface", "use": "ui" },
+        { "fg": "focus-ring", "bg": "surface-raised", "use": "ui" }
+      ]
+    }
+  }
+}

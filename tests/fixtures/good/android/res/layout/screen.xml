@@ -1,0 +1,9 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android">
+  <ImageView android:src="@drawable/divider" android:importantForAccessibility="no" />
+  <ImageButton android:src="@drawable/ic_share" android:contentDescription="@string/share" />
+  <TextView android:text="Total" android:textSize="14sp" />
+  <Button android:text="Save" />
+  <com.google.android.material.textfield.TextInputLayout android:hint="Username">
+    <com.google.android.material.textfield.TextInputEditText android:autofillHints="username" />
+  </com.google.android.material.textfield.TextInputLayout>
+</LinearLayout>
